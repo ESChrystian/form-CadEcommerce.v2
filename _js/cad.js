@@ -222,3 +222,37 @@ function complementoDigitado() {
 }
 document.getElementById("complemento").addEventListener("focusout", complementoDigitado);
 
+
+// ######################################################################################
+// Estrutura condição if e else, que verifica se os campos foram preeenchidos e corretamente 
+document.getElementById("proximo").addEventListener("click", () => {
+    // Funcão que chamara as personalização de css
+    // também sera usada somente quando os campos estiverem preeenchidos
+
+    if (document.getElementById("nome").value == "" || document.getElementById("senha").value == "" || document.getElementById("email").value == "") {
+    //    Se o input estiver vazio o usuário recebe uma mensagem de erro
+        document.getElementById("mensagemNome").innerHTML = "Preencha os campos para avançar.";
+        document.getElementById("mensagemEmail").innerHTML = "Preencha os campos para avançar.";
+        document.getElementById("mensagemSenha").innerHTML = "Preencha os campos para avançar.";
+    }
+    if (document.getElementById("cpf").value == "") {
+        document.getElementById("mensagemCpf").innerHTML = "Preencha seu CPF.";
+        // Verificação separadamente do CPF 
+    }
+    else if (ValidaCPF == "false") {
+        // Se o usuário preenche incorretamente seu CPF, obrigatóriamente não pode sair do input até preencher corretamente
+        document.getElementById('cpf').focus();
+        document.getElementById("mensagemCpf").innerHTML = "Preencha seu CPF corretamente.";
+
+    }
+    else {
+        // Se todas validações passarem, aqui uma animação no CSS para chamar o próximo formulário é inciada
+        document.getElementById("form1").classList.add("toggle1");
+        document.getElementById("form2").classList.add("toggle2");
+        document.getElementById("proximo").style.display = "none";
+
+    }
+
+
+
+});
