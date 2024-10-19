@@ -1,0 +1,266 @@
+:root {
+    ---Background: #143462;
+    ---LeftView: #7c0517;
+    ---Azulescuro: #3790c3;
+    ---Text: #fafafa;
+}
+
+/* CSS */
+/* Botão de cadastro */
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: #242424;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-85:before {
+    content: "";
+    background: linear-gradient(45deg,
+            #143462,
+            #7c0517,
+            #3790c3,
+            #fafafa);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #3790c3;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+/* Barra de Pesquisa */
+/* PERSONALIZAÇÃO DA DIVS UTILIZADAS*/
+
+/* ICONE "FECHAR" FEITO MANUALMENTE */
+.close-box {
+    width: 80px;
+    height: 30px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    cursor: pointer;
+}
+
+.close-box .line-1 {
+    width: 2px;
+    height: 20px;
+    background-color: #fafafa;
+    transform: rotate(135deg);
+}
+
+.close-box .line-2 {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: #fafafa;
+    transform: rotate(45deg);
+}
+
+/* PERSONALIZAÇÃO DIV ONDE RESIDE O ICONE DE LUPA */
+.barra-busca {
+    width: 80px;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    transition: 0.3s;
+    align-items: center;
+
+}
+
+
+/* PERSONALIZAÇÃO ATIVADA COM O "CLICK" DO USUÁRIO NA ÁREA DE PESQUISA */
+.barra-busca.abrir {
+    width: 380px;
+
+}
+
+/* PERSONALIZAÇÃO DAS DIVS*/
+.barra-busca .pesquisar-box,
+.barra-busca .close-box {
+    min-width: 80px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* PERSONALIZAÇÃO DO ICONE PESQUISAR */
+.barra-busca .pesquisar-box i {
+    font-size: 25px;
+    color: #fafafa;
+}
+
+/* PERSONALIZAÇÃO DA ÁREA ONDE RESIDE O "INPUT"*/
+.barra-busca .input-box {
+    position: absolute;
+    left: 80px;
+    width: calc(100% -120px);
+    height: 100%;
+    line-height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+/* PERSONALIZAÇÃO DO CAMPO DE PREENCHIMENTO */
+.barra-busca .input-box input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #282828;
+    font-size: 15px;
+    color: #000;
+    width: 200px;
+    border-radius: 20px;
+
+}
+
+.barra-busca .input-box input::placeholder {
+
+    text-align: center;
+
+}
+
+/* Personalização do inputs */
+
+input[type=date] {
+    border: .2em solid var();
+    padding: .8em .9em;
+    border-radius: 2em;
+    color: #000;
+    width: 150px;
+}
+
+/* // Number */
+input[type=number] {
+    width: 3em;
+    padding: 0.5em;
+    border: .2em solid var(---Azulescuro);
+    border-radius: 1em;
+    text-align: center;
+    color: #000;
+    appearance: textfield;
+    margin: 0;
+
+}
+
+input[type=text] {
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: .2em solid var(---LeftView);
+    background: rgba(255, 255, 255, 0.3);
+    padding: .4em;
+    color: #000;
+}
+
+input[type=password] {
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: .2em solid var(---LeftView);
+    background: rgba(255, 255, 255, 0.3);
+    padding: .4em;
+    color: #000;
+}
+
+/* // Button  */
+input[type=submit] {
+    appearance: none;
+    background: var(---LeftView);
+    padding: .85em 1.5em;
+    color: #fafafa;
+    border-radius: 2em;
+    transition: 0.3s;
+
+}
+
+.left button {
+    appearance: none;
+    border: .2em solid var(---LeftView);
+    background: hsl(0 0 0/0);
+    padding: .85em 1.5em;
+    color: var(---LeftView);
+    border-radius: 2em;
+    transition: 0.3s;
+}
+
+.left button:active {
+    border: .2em solid var(---Background);
+    background: var(---Background);
+    padding: .85em 1.5em;
+    color: var(---Text);
+    border-radius: 2em;
+    transition: 0.1s;
+}
+
+.right button {
+    appearance: none;
+    border: .2em solid var(---Text);
+    background: hsl(0 0 0/0);
+    padding: .85em 1.5em;
+    color: #fafafa;
+    border-radius: 2em;
+    transition: 0.3s;
+
+}
+
+.right button:active {
+    border: .2em solid var(---Background);
+    padding: .85em 1.5em;
+    color: var(---Background);
+    border-radius: 2em;
+    transition: 0.3s;
+
+}
+
+input[type=submit]:active {
+    border: none;
+    background: var(---LeftView);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 24px 25px, rgba(0, 0, 0, 0.12) 0px -12px 10px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 10px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: #fff;
+}
