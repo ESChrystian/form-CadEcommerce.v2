@@ -256,3 +256,36 @@ document.getElementById("proximo").addEventListener("click", () => {
 
 
 });
+
+
+// Escutador de todos os campos CEP se estão preenchidos
+document.getElementById("btnConfirmar").addEventListener("click", () => {
+    if (document.getElementById('cep').value == "" ||
+        document.getElementById('logradouro').value == "" ||
+        document.getElementById('localidade').value == "" ||
+        document.getElementById('uf').value == "" ||
+        document.getElementById('bairro').value == "") {
+         //Se o input estiver sem valor, uma mensagem de erro e exibida e borda do campo fica automaticamente vermelha
+
+        document.getElementById("mensagemCep").style.color = "red"; 
+        document.getElementById("mensagemCep").innerHTML = "Por favor preencha os campos de endereço!";
+
+    } else if (document.getElementById('numero').value == "") {
+        // O input número e verificado separadamente, exibindo também uma mensagem de erro
+        document.getElementById("mensagemNumero").style.color = "red";
+    document.getElementById("numero").style.borderColor = "red";
+        document.getElementById("mensagemNumero").innerHTML = "Por favor, preencha seu número residencial.";
+
+    } else {
+
+        document.getElementById("cep").style.borderColor = "green";
+        document.getElementById("logradouro").style.borderColor = "green";
+        document.getElementById("localidade").style.borderColor = "green";
+        document.getElementById("numero").style.borderColor = "green";
+        document.getElementById("uf").style.borderColor = "green";
+        document.getElementById("complemento").style.borderColor = "green";
+        document.getElementById("form1").style.display = "none";
+        alert("Parabéns voçê se cadastrou!!");
+    }
+
+});
