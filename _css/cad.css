@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Importa a fonte Montserrat do Google Fonts, com diferentes variações de peso e estilo */
+
+:root {
+    ---Background: #143462;
+    ---LeftView: #7c0517;
+    ---Azulescuro: #3790c3;
+    ---text: #fafafa;
+}
+/* Define variáveis CSS que armazenam cores específicas para facilitar o reuso no código */
+
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    place-content: center;
+}
+/* Aplica o estilo global ao body:
+   - Define a fonte 'Poppins'
+   - Remove margens e padding
+   - Ocupa 100% da altura e largura da tela
+   - Centraliza o conteúdo horizontal e verticalmente */
+
+.body.dark {
+    background-color: #000;
+    color: var(---text);
+    transition: 0.5s ease-in-out;
+}
+/* Estiliza o body quando a classe 'dark' é aplicada:
+   - Define o fundo preto e a cor do texto a partir da variável ---text
+   - Aplica uma transição suave nas mudanças de estilo */
+
+.body.dark input::placeholder {
+    color: var(---LeftView);
+}
+/* Quando o body tem a classe 'dark', a cor do placeholder dos inputs será a cor definida em ---LeftView */
+
+.body.dark input { 
+    color: var(---text);
+    background: #242424;
+}
+/* Estiliza os inputs na versão 'dark':
+   - Define a cor do texto como ---text
+   - Define o fundo dos inputs como #242424 */
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+/* Estiliza o elemento principal (main):
+   - Ocupa 100% da largura e altura da tela
+   - Usa flexbox para organizar o conteúdo dentro de main */
+
+.left {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+/* Estiliza a seção esquerda (left):
+   - Ocupa 50% da largura da tela
+   - Centraliza o conteúdo verticalmente com flexbox
+   - Define o posicionamento relativo para controlar o layout interno */
+
+.right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    background-image: url("../images/Person-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Estiliza a seção direita (right):
+   - Ocupa 50% da largura da tela
+   - Centraliza o conteúdo vertical e horizontalmente com flexbox
+   - Define uma imagem de fundo com ajuste total (cover), centralizada, e sem repetição */
+
+.left form {
+    height: 50%;
+    width: 100%;
+}
+/* Estiliza o formulário dentro da seção esquerda:
+   - Ocupa 50% da altura e 100% da largura disponíveis */
+
+.left .form1 {
+    position: absolute;
+    right: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    flex-direction: column;
+    transition: 0.5s ease-in;
+    height: 80%;
+}
+/* Estiliza o primeiro formulário (.form1) na seção esquerda:
+   - Posiciona-o absolutamente, 900px à direita
+   - Usa flexbox para centralizar o conteúdo em coluna
+   - Aplica uma transição suave nas alterações de posição
+   - Define altura de 80% */
+
+.left .form2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    flex-direction: column;
+    transition: 0.5s ease-in;
+    height: 70%;
+}
+/* Estiliza o segundo formulário (.form2):
+   - Similar ao .form1, mas ocupa 70% de altura */
+
+.form1.toggle1 {
+    right: 0px;
+}
+/* Quando a classe .toggle1 é aplicada a .form1, ela se move para a direita (0px) */
+
+.form2.toggle2 {
+    right: 600px;
+}
+/* Quando a classe .toggle2 é aplicada a .form2, ela se move para a posição 600px à direita */
+
+.left form .input-box {
+    width: 50%;
+    height: 55%;
+}
+/* Estiliza o container dos campos de input no formulário:
+   - Define largura de 50% e altura de 55% */
+
+.left form .title {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    place-content: center;
+}
+/* Estiliza o título do formulário:
+   - Ocupa 100% da largura e 20% da altura
+   - Centraliza o texto com flexbox */
+
+.form1 .title h1 {
+    width: 500px;
+}
+/* Define a largura do título (h1) em 500px dentro do formulário .form1 */
+
+.left form input {
+    width: 95%;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    place-content: center;
+}
+/* Estiliza os campos de input do formulário:
+   - Define a largura de 95%
+   - Adiciona espaçamento superior (10px) e padding inferior (10px) */
+
+.left #proximo {
+    position: relative;
+    left: 80%;
+}
+/* Posiciona o botão "proximo" relativo, deslocado 80% para a esquerda */
+
+.right img {
+    width: 700px;
+}
+/* Define a largura da imagem na seção direita em 700px */
+
+.right {
+    display: flex;
+    align-items: center;
+    place-content: center;
+    overflow: hidden;
+}
+/* Aplica flexbox na seção direita para centralizar o conteúdo
+   e esconde qualquer conteúdo que ultrapasse os limites (overflow: hidden) */
+
+.right #end {
+    position: relative;
+    top: 45%;
+    left: 30%;
+}
+/* Posiciona o elemento com ID 'end' relativo, 45% para baixo e 30% para a esquerda */
