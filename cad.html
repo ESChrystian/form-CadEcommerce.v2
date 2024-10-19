@@ -9,3 +9,104 @@
     <link rel='stylesheet' type='text/css' media='screen' href='_css/cad.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='_css/elements.css'>
 </head>
+
+<body class="body">
+    <main>
+        <div class="left">
+
+            <form action="" class="form1" id="form1">
+
+                <div class="title">
+                    <h1>Agora preencha dados de endereço</h1>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="CEP" name="cep" id="cep" maxlength="8"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                    <div id="mensagemCep" class="msg"></div>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Cidade" name="localidade" id="localidade">
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Bairro" name="bairro" id="bairro">
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Estado" name="uf" id="uf">
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Rua" name="logradouro" id="logradouro">
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Número Residencial" id="numero" maxlength="3"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+                    <div id="mensagemNumero"></div>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Complemento" name="complemento" id="complemento">
+                </div>
+
+                <div class="input-box">
+                    <button type="button" class="confirmar" id="btnConfirmar">Confirmar</button>
+                </div>
+
+            </form>
+
+            <form action="" class="form2" id="form2" id="form2">
+                <div class="title">
+                    <h1>Preencha seus Dados</h1>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Nome" name="nome" id="nome">
+                    <div id="mensagemNome" class="msg"></div>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Email" name="email" id="email">
+                    <div id="mensagemEmail" class="msg"></div>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" placeholder="Senha" name="senha" id="senha">
+                    <div id="mensagemSenha" class="msg"></div>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="CPF" name="cpf" id="cpf" maxlength="11"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                    <div id="mensagemCpf" class="msg"></div>
+                </div>
+
+                <div class="input-box">
+                    <label for="">Data de Nascimento:</label>
+                    <input type="date" placeholder="Data de Nascimento">
+                </div>
+
+            </form>
+
+            <input type="submit" id="proximo" value="Próximo">
+        </div>
+
+
+        <div class="right">
+            <footer id="end">
+                <button class="light"> Light Theme</button>
+                <button class="dark">Dark Theme</button>
+            </footer>
+        </div>
+
+    </main>
+
+    <script src='main.js'></script>
+
+
+</body>
+
+</html>
