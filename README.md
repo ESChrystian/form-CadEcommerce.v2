@@ -9,7 +9,7 @@
 <h1 align="center">Formulário de Cadastro Ecommerce</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/ESChrystian/form_cadecommerce.v2?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/ESChrystian/form-CadEcommerce.v2?color=56BEB8">
 
   <img alt="Github language count" src="https://img.shields.io/github/languages/count/ESChrystian/form_cadecommerce.v2?color=56BEB8">
 
