@@ -15,13 +15,6 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/ESChrystian/form-CadEcommerce.v2?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/ESCjrystian/form-CadEcommerce.v2?color=56BEB8">
-
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/form_cadecommerce-v2?color=56BEB8" /> -->
-
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/form_cadecommerce-v2?color=56BEB8" /> -->
-
-   <img alt="Github stars" src="https://img.shields.io/github/stars/ESChrystian/form_cadecommerce-v2?color=56BEB8" /> 
 </p>
 
 <!-- Status -->
